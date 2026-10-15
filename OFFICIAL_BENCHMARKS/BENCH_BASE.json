@@ -1,0 +1,493 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "TEXTILE",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CLOTHING_MANUFACTURING\\TEXTILE\\UPSTREAM_CLONE",
+    "git": {
+      "head": "389432db554cc37a6bd1844d791bfb59d1df5ae4",
+      "url": "https://github.com/kashinoleg/pakm-3d",
+      "branch": "master",
+      "committed_at": "2019-03-12T12:03:50+05:00"
+    }
+  },
+  "metrics": {
+    "files_total": 275,
+    "source_files_scanned": 228,
+    "lines_of_code": 73455,
+    "languages": {
+      ".h": 118,
+      ".cpp": 107,
+      ".dll": 12,
+      ".xpm": 5,
+      "(none)": 4,
+      ".vcxproj": 3,
+      ".filters": 3,
+      ".user": 3,
+      ".wxs": 3,
+      ".md": 2,
+      ".rtf": 2,
+      ".config": 2,
+      ".sln": 1,
+      ".py": 1,
+      ".rc": 1
+    }
+  },
+  "licence": {
+    "spdx": "GPL-3.0",
+    "class": "B",
+    "source_file": "LICENSE",
+    "redistribution_allowed": false
+  },
+  "dependencies": {
+    "count": 0,
+    "unique": 0,
+    "by_ecosystem": {},
+    "list": []
+  },
+  "owasp_top10": {
+    "total_findings": 52,
+    "files_with_findings": 46,
+    "severity": {
+      "high": 2,
+      "medium": 0,
+      "low": 50
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "pakm-3d/resource.h",
+            "line": 1226,
+            "cwe": "CWE-327",
+            "snippet": "#define WM_CHANGECBCHAIN                0x030D"
+          }
+        ]
+      },
+      "A03-Injection": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "Core/TetgenMesh.cpp",
+            "line": 914,
+            "cwe": "CWE-120",
+            "snippet": "sprintf(szSwitches, \"pzAPBq%fa%f\", dMinAngle, dMaxArea);"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 34,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "Core/Domain.h",
+            "line": 38,
+            "cwe": "CWE-",
+            "snippet": "virtual void ClipMeshToDomain(CMesh &Mesh, bool bFillGaps = true) const = 0;"
+          },
+          {
+            "severity": "low",
+            "file": "Core/DomainPlanes.cpp",
+            "line": 279,
+            "cwe": "CWE-",
+            "snippet": "void CDomainPlanes::ClipMeshToDomain(CMesh &Mesh, bool bFillGaps) const"
+          },
+          {
+            "severity": "low",
+            "file": "Core/DomainPlanes.h",
+            "line": 39,
+            "cwe": "CWE-",
+            "snippet": "void ClipMeshToDomain(CMesh &Mesh, bool bFillGaps = true) const;"
+          },
+          {
+            "severity": "low",
+            "file": "Core/FibreDistribution1DQuad.cpp",
+            "line": 39,
+            "cwe": "CWE-",
+            "snippet": "double dx = abs(x_1 - x_0);\t// TODO: Probably shouldn't be taking the absoulte value here"
+          },
+          {
+            "severity": "low",
+            "file": "Core/InterpolationBezier.cpp",
+            "line": 17,
+            "cwe": "CWE-",
+            "snippet": "// TODO: IMPLEMENT ME"
+          },
+          {
+            "severity": "low",
+            "file": "Core/InterpolationCubic.cpp",
+            "line": 19,
+            "cwe": "CWE-",
+            "snippet": "// TODO: IMPLEMENT ME"
+          },
+          {
+            "severity": "low",
+            "file": "Core/InterpolationLinear.cpp",
+            "line": 18,
+            "cwe": "CWE-",
+            "snippet": "// TODO: IMPLEMENT ME"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Mesh.cpp",
+            "line": 796,
+            "cwe": "CWE-",
+            "snippet": "// Todo: If the bQuality flag is set then use a more intelligent"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Textile.cpp",
+            "line": 141,
+            "cwe": "CWE-",
+            "snippet": "void CTextile::AddSurfaceToMesh(CMesh &Mesh, bool bTrimToDomain)"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Textile.h",
+            "line": 57,
+            "cwe": "CWE-",
+            "snippet": "\\param bTrimToDomain Mesh inserted will be clipped to the domain size"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Yarn.cpp",
+            "line": 33,
+            "cwe": "CWE-",
+            "snippet": "// TODO: Implement in a similar way to above"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/ControlsWindow.cpp",
+            "line": 275,
+            "cwe": "CWE-",
+            "snippet": "pSubSizer->Add(new wxCheckBox(pControls, ID_TrimtoDomain, wxT(\"Trim to domain\")), SizerFlags);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/Convert.cpp",
+            "line": 7,
+            "cwe": "CWE-",
+            "snippet": "//TODO"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/ConvertString.cpp",
+            "line": 25,
+            "cwe": "CWE-",
+            "snippet": "double Convert::ToDouble(string String)"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/ConvertString.h",
+            "line": 62,
+            "cwe": "CWE-",
+            "snippet": "static double ToDouble(wxString String);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/DomainPlanesDialog.cpp",
+            "line": 32,
+            "cwe": "CWE-",
+            "snippet": "Item.GetText().ToDouble(&Plane.Normal.x);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/Exporter.cpp",
+            "line": 52,
+            "cwe": "CWE-",
+            "snippet": "opencascade::handle<TDocStd_Document> CExporter::ShapesToDocument(const vector<TopoDS_Solid> solids)"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/Exporter.h",
+            "line": 108,
+            "cwe": "CWE-",
+            "snippet": "static opencascade::handle<TDocStd_Document> ShapesToDocument(const vector<TopoDS_Solid> shapes);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/LayersOffsetDialog.cpp",
+            "line": 118,
+            "cwe": "CWE-",
+            "snippet": "X.ToDouble(&Offset.x);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/Modeller.cpp",
+            "line": 291,
+            "cwe": "CWE-",
+            "snippet": "// TODO: Should really check if the object is already selected or not...."
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/RangeValidator.cpp",
+            "line": 100,
+            "cwe": "CWE-",
+            "snippet": "if(!value.ToDouble(&number))"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/SectionSelect.cpp",
+            "line": 147,
+            "cwe": "CWE-",
+            "snippet": "m_Width.ToDouble(&dWidth);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/TexGenMainFrame.cpp",
+            "line": 31,
+            "cwe": "CWE-",
+            "snippet": "EVT_CHECKBOX_MENU_RANGE(ID_RenderNodes, ID_TrimtoDomain, CTexGenMainFrame::OnRendering)"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/TexGenMainFrame.h",
+            "line": 74,
+            "cwe": "CWE-",
+            "snippet": "void OnTrimtoDomain(bool check);"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/TexGenRenderer.cpp",
+            "line": 12,
+            "cwe": "CWE-",
+            "snippet": ", m_bTrimToDomain(true)"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 16,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "Core/BasicVolumes.cpp",
+            "line": 730,
+            "cwe": "CWE-319",
+            "snippet": "// Algorithm borrowed from http://local.wasp.uwa.edu.au/~pbourke/geometry/insidepoly/"
+          },
+          {
+            "severity": "low",
+            "file": "Core/DomainPlanes.cpp",
+            "line": 76,
+            "cwe": "CWE-319",
+            "snippet": "// See http://www.unknownroad.com/rtfm/graphics/rt_normals.html for details"
+          },
+          {
+            "severity": "low",
+            "file": "Core/InterpolationCubic.cpp",
+            "line": 101,
+            "cwe": "CWE-319",
+            "snippet": "Adapted from: http://www.cse.unsw.edu.au/~lambert/splines/NatCubicClosed.java"
+          },
+          {
+            "severity": "low",
+            "file": "Core/MatrixUtils.h",
+            "line": 8,
+            "cwe": "CWE-319",
+            "snippet": "// Maths from http://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Mesh.cpp",
+            "line": 1058,
+            "cwe": "CWE-319",
+            "snippet": "// A more efficient algorithm is described in http://www.cs.umd.edu/~mount/754/Lects/754lects.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "Core/mymath.h",
+            "line": 758,
+            "cwe": "CWE-319",
+            "snippet": "/// http://http://paulbourke.net/geometry/pointlineplane/"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Properties.h",
+            "line": 76,
+            "cwe": "CWE-319",
+            "snippet": "it from http://sourceforge.net/projects/units/. Note that tex and denier"
+          },
+          {
+            "severity": "low",
+            "file": "Core/SectionMeshTriangulate.h",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "/// Creates a mesh of a section using open source package triangle http://www.cs.cmu.edu/~quake/triangle.html"
+          },
+          {
+            "severity": "low",
+            "file": "Core/SimulationAbaqus.cpp",
+            "line": 1041,
+            "cwe": "CWE-319",
+            "snippet": "// From: http://softsurfer.com/Archive/algorithm_0101/algorithm_0101.htm#area3D_Polygon"
+          },
+          {
+            "severity": "low",
+            "file": "Core/TetgenMesh.cpp",
+            "line": 901,
+            "cwe": "CWE-319",
+            "snippet": "// http://www-2.cs.cmu.edu/~quake/triangle.switch.html"
+          },
+          {
+            "severity": "low",
+            "file": "Core/TetgenMesh.h",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "/** Class which tetrahedralizes a textile using Tetgen software http://tetgen.berlios.de/"
+          },
+          {
+            "severity": "low",
+            "file": "Core/units.h",
+            "line": 205,
+            "cwe": "CWE-319",
+            "snippet": "*      exception mechanism.  (http://www.swig.org)"
+          },
+          {
+            "severity": "low",
+            "file": "Core/Yarn.cpp",
+            "line": 1642,
+            "cwe": "CWE-319",
+            "snippet": "// Algorithm borrowed from http://paulbourke.net/geometry/polygonmesh/"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/Embedded.py",
+            "line": 1,
+            "cwe": "CWE-319",
+            "snippet": "# This file was automatically generated by SWIG (http://www.swig.org)."
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/RangeValidator.h",
+            "line": 6,
+            "cwe": "CWE-319",
+            "snippet": "/// Taken from wxWidgets user forum: http://forums.wxwidgets.org/viewtopic.php?t=12582"
+          },
+          {
+            "severity": "low",
+            "file": "pakm-3d/TexGenRenderer.h",
+            "line": 78,
+            "cwe": "CWE-319",
+            "snippet": "/// Used for rendering stuff using VTK http://www.vtk.org/"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:11a9295b-dbe8-5b7e-85ab-cbdc52363f51",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T15:39:47Z",
+      "component": {
+        "type": "application",
+        "name": "TEXTILE",
+        "version": "389432db554c",
+        "bom-ref": "pkg:generic/anticloud/TEXTILE@389432db554c",
+        "purl": "pkg:generic/anticloud/TEXTILE@389432db554c",
+        "licenses": [
+          {
+            "license": {
+              "id": "GPL-3.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "389432db554cc37a6bd1844d791bfb59d1df5ae4"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/kashinoleg/pakm-3d"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": []
+  },
+  "elapsed_seconds": 4.44
+}

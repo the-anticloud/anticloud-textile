@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:11a9295b-dbe8-5b7e-85ab-cbdc52363f51",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T15:39:47Z",
+    "component": {
+      "type": "application",
+      "name": "TEXTILE",
+      "version": "389432db554c",
+      "bom-ref": "pkg:generic/anticloud/TEXTILE@389432db554c",
+      "purl": "pkg:generic/anticloud/TEXTILE@389432db554c",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "389432db554cc37a6bd1844d791bfb59d1df5ae4"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/kashinoleg/pakm-3d"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
